@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semana 8 - Pruebas Unitarias</title>
+
+<style>
+
+body{
+
+font-family:'Segoe UI',sans-serif;
+background:#eef3f8;
+margin:0;
+padding:40px;
+
+}
+
+.contenedor{
+
+max-width:1100px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0px 5px 15px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+text-align:center;
+color:#0d47a1;
+
+}
+
+h2{
+
+background:#1565c0;
+color:white;
+padding:12px;
+border-radius:8px;
+
+}
+
+.tarjeta{
+
+background:#f8fbff;
+border-left:6px solid #1565c0;
+padding:20px;
+margin:25px 0;
+border-radius:10px;
+
+}
+
+.ejercicio{
+
+background:#fff8e1;
+border-left:6px solid #ff9800;
+padding:20px;
+margin-top:25px;
+border-radius:10px;
+
+}
+
+.respuesta{
+
+background:#e8f5e9;
+padding:15px;
+margin-top:15px;
+border-radius:8px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+
+}
+
+table th{
+
+background:#1565c0;
+color:white;
+padding:12px;
+
+}
+
+table td{
+
+border:1px solid #ccc;
+padding:10px;
+
+}
+
+code{
+
+background:#eeeeee;
+padding:3px 6px;
+border-radius:5px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Semana 8</h1>
+
+<h2>Pruebas Unitarias</h2>
+
+<p>
+
+Las pruebas unitarias permiten verificar el correcto funcionamiento de una función, método o clase de manera independiente. Su propósito es detectar errores desde las primeras etapas del desarrollo, facilitando el mantenimiento del software y mejorando su calidad.
+
+</p>
+
+<hr>
+
+<h2>Ejercicios - Diapositiva 3</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+
+Una función llamada <code>calcularPromedio()</code> recibe tres notas y devuelve el promedio final del estudiante.
+
+</p>
+
+<p>
+
+<strong>Pregunta:</strong>
+
+¿Puede considerarse una unidad para realizar una prueba unitaria? Explique su respuesta.
+
+</p>
+
+<div class="respuesta">
+
+<p>
+
+Sí. Una función representa una unidad de código porque realiza una tarea específica y puede probarse de forma independiente sin necesidad de ejecutar el resto del sistema.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+
+Analice el siguiente escenario:
+
+</p>
+
+<p>
+
+Una prueba necesita conectarse a Internet para obtener información antes de ejecutarse.
+
+</p>
+
+<p>
+
+<strong>Pregunta:</strong>
+
+¿Qué principio FIRST no se está cumpliendo?
+
+</p>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+
+<th>Principio</th>
+
+<th>Respuesta</th>
+
+</tr>
+
+<tr>
+
+<td>Independent</td>
+
+<td>
+
+No se cumple porque la prueba depende de un servicio externo (Internet), por lo que su resultado puede variar.
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+
+Seleccione el principio FIRST que corresponde a cada situación.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Situación</th>
+
+<th>Principio</th>
+
+</tr>
+
+<tr>
+
+<td>La prueba tarda menos de un segundo.</td>
+
+<td>Fast</td>
+
+</tr>
+
+<tr>
+
+<td>Siempre produce el mismo resultado.</td>
+
+<td>Repeatable</td>
+
+</tr>
+
+<tr>
+
+<td>El resultado es aprobado o fallido automáticamente.</td>
+
+<td>Self-Validating</td>
+
+</tr>
+
+<tr>
+
+<td>Se desarrolla antes del código.</td>
+
+<td>Timely</td>
+
+</tr>
+
+</table>
+
+<div class="respuesta">
+
+<p>
+
+Estos principios garantizan que las pruebas unitarias sean rápidas, confiables y fáciles de mantener.
+
+</p>
+
+</div>
+
+</div>
+<hr>
+
+<h2>Ejercicios - Diapositiva 4 (Patrón AAA)</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p><strong>Enunciado:</strong></p>
+
+<p>
+Observe el siguiente caso de prueba e identifique las partes del patrón AAA.
+</p>
+
+<pre>
+double precio = 300;
+double descuento = 0.20;
+Calculadora calc = new Calculadora();
+
+double resultado = calc.descuento(precio, descuento);
+
+assertEquals(240, resultado);
+</pre>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+<th>Patrón</th>
+<th>Respuesta</th>
+</tr>
+
+<tr>
+<td>Arrange</td>
+<td>Se crean las variables <b>precio</b>, <b>descuento</b> y el objeto <b>Calculadora</b>.</td>
+</tr>
+
+<tr>
+<td>Act</td>
+<td>Se ejecuta el método <b>calc.descuento()</b>.</td>
+</tr>
+
+<tr>
+<td>Assert</td>
+<td>Se verifica que el resultado obtenido sea igual a 240.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p><strong>Enunciado:</strong></p>
+
+<p>
+Ordene correctamente las etapas del patrón AAA.
+</p>
+
+<ul>
+
+<li>Verificar el resultado.</li>
+
+<li>Preparar los datos.</li>
+
+<li>Ejecutar la función.</li>
+
+</ul>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+<th>Orden Correcto</th>
+</tr>
+
+<tr>
+<td>1. Arrange → Preparar los datos.</td>
+</tr>
+
+<tr>
+<td>2. Act → Ejecutar la función.</td>
+</tr>
+
+<tr>
+<td>3. Assert → Verificar el resultado.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p><strong>Enunciado:</strong></p>
+
+<p>
+
+Una prueba crea un objeto Usuario, registra la información y finalmente verifica que el nombre almacenado sea correcto.
+
+</p>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+<th>Etapa</th>
+<th>Actividad</th>
+</tr>
+
+<tr>
+<td>Arrange</td>
+<td>Crear el objeto Usuario y asignar los datos.</td>
+</tr>
+
+<tr>
+<td>Act</td>
+<td>Ejecutar el método registrar().</td>
+</tr>
+
+<tr>
+<td>Assert</td>
+<td>Comprobar que el nombre registrado sea correcto.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios - Diapositiva 5 (Diseño de Casos de Prueba)</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+
+Una función registra la cantidad de productos en inventario.
+
+</p>
+
+<p>
+
+La cantidad válida debe estar entre <b>1 y 500</b>.
+
+</p>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+
+<th>Tipo de Caso</th>
+
+<th>Entrada</th>
+
+<th>Resultado Esperado</th>
+
+</tr>
+
+<tr>
+
+<td>Válido</td>
+
+<td>250</td>
+
+<td>Registro correcto.</td>
+
+</tr>
+
+<tr>
+
+<td>Límite</td>
+
+<td>1 y 500</td>
+
+<td>Aceptados correctamente.</td>
+
+</tr>
+
+<tr>
+
+<td>Inválido</td>
+
+<td>-5 y 700</td>
+
+<td>Mostrar mensaje de error.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+
+Una aplicación bancaria permite retirar dinero únicamente entre <b>$10 y $1000</b>.
+
+</p>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+
+<th>Tipo</th>
+
+<th>Valor</th>
+
+<th>Resultado</th>
+
+</tr>
+
+<tr>
+
+<td>Válido</td>
+
+<td>$500</td>
+
+<td>Retiro exitoso.</td>
+
+</tr>
+
+<tr>
+
+<td>Límite</td>
+
+<td>$10 y $1000</td>
+
+<td>Retiro permitido.</td>
+
+</tr>
+
+<tr>
+
+<td>Inválido</td>
+
+<td>$5 y $1500</td>
+
+<td>Operación rechazada.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+
+Una plataforma educativa acepta calificaciones entre <b>0 y 100</b>.
+
+</p>
+
+<div class="respuesta">
+
+<table>
+
+<tr>
+
+<th>Tipo</th>
+
+<th>Entrada</th>
+
+<th>Resultado Esperado</th>
+
+</tr>
+
+<tr>
+
+<td>Válido</td>
+
+<td>80</td>
+
+<td>Nota registrada.</td>
+
+</tr>
+
+<tr>
+
+<td>Límite</td>
+
+<td>0 y 100</td>
+
+<td>Nota aceptada.</td>
+
+</tr>
+
+<tr>
+
+<td>Inválido</td>
+
+<td>-10 y 120</td>
+
+<td>Error de validación.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>Conclusión</h2>
+
+<div class="tarjeta">
+
+<p>
+
+Las pruebas unitarias constituyen la base del aseguramiento de la calidad del software, ya que permiten verificar el funcionamiento correcto de cada unidad de código antes de integrar el sistema completo. La aplicación de los principios FIRST, el uso del patrón AAA y el diseño adecuado de casos de prueba ayudan a detectar errores de manera temprana, reducir costos de mantenimiento y mejorar la confiabilidad del software.
+
+</p>
+
+</div>
+
+<a href="index.html">
+
+⬅ Volver al cronograma
+
+</a>
+
+</div>
+
+</body>
+
+</html>

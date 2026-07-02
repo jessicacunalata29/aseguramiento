@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semana 7 - Tipos de Pruebas de Software</title>
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:40px;
+line-height:1.7;
+}
+
+.contenedor{
+
+max-width:1100px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0px 5px 18px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+text-align:center;
+color:#0d47a1;
+
+}
+
+h2{
+
+background:#1565c0;
+color:white;
+padding:12px;
+border-radius:8px;
+
+}
+
+h3{
+
+color:#1565c0;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+margin-bottom:30px;
+
+}
+
+table th{
+
+background:#1565c0;
+color:white;
+padding:12px;
+
+}
+
+table td{
+
+border:1px solid #ccc;
+padding:10px;
+
+}
+
+ul li{
+
+margin-bottom:10px;
+
+}
+
+.caja{
+
+background:#e3f2fd;
+padding:15px;
+border-left:6px solid #1565c0;
+border-radius:10px;
+margin-top:15px;
+margin-bottom:20px;
+
+}
+
+.ejercicio{
+
+background:#fff8e1;
+padding:20px;
+border-left:6px solid orange;
+margin-top:20px;
+border-radius:10px;
+
+}
+
+a{
+
+display:inline-block;
+margin-top:25px;
+padding:12px 22px;
+background:#1565c0;
+color:white;
+text-decoration:none;
+border-radius:8px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Semana 7</h1>
+
+<h2>Tipos de Pruebas de Software</h2>
+
+<p>
+
+Las pruebas de software son actividades cuyo objetivo es verificar que un sistema funcione correctamente, cumpla con los requisitos establecidos y ofrezca un producto de calidad al usuario final. Estas pruebas permiten detectar errores antes de que el software sea entregado, reduciendo costos de mantenimiento y aumentando la confiabilidad del sistema.
+
+</p>
+
+<hr>
+
+<h2>1. Desarrollo de Conceptos (Diapositiva 3)</h2>
+
+<h3>Pruebas Funcionales</h3>
+
+<div class="caja">
+
+<p>
+
+Las pruebas funcionales verifican que cada función del sistema cumpla con los requisitos establecidos por el cliente. Se enfocan en comprobar qué hace el sistema sin importar cómo está desarrollado internamente. Generalmente se evalúan funciones como el inicio de sesión, el registro de usuarios, cálculos, consultas, reportes y cualquier proceso que forme parte de los requerimientos funcionales.
+
+</p>
+
+<p>
+
+Su objetivo principal es garantizar que todas las funcionalidades produzcan los resultados esperados cuando reciben datos válidos e inválidos.
+
+</p>
+
+</div>
+
+<h3>Pruebas No Funcionales</h3>
+
+<div class="caja">
+
+<p>
+
+Las pruebas no funcionales evalúan la calidad del sistema y su comportamiento durante la ejecución. No verifican una función específica, sino características como el rendimiento, la velocidad, la seguridad, la disponibilidad, la usabilidad y la compatibilidad.
+
+</p>
+
+<p>
+
+Estas pruebas ayudan a garantizar que el software pueda utilizarse correctamente incluso cuando existe una gran cantidad de usuarios o condiciones extremas.
+
+</p>
+
+</div>
+
+<h3>Pruebas Estáticas</h3>
+
+<div class="caja">
+
+<p>
+
+Las pruebas estáticas se realizan sin ejecutar el programa. Consisten en revisar documentos, diagramas, requisitos, código fuente y diseño para detectar errores antes de que el sistema sea compilado o ejecutado.
+
+</p>
+
+<p>
+
+Entre las actividades más comunes están las inspecciones, revisiones técnicas, walkthroughs y análisis estático del código.
+
+</p>
+
+</div>
+
+<h3>Pruebas Dinámicas</h3>
+
+<div class="caja">
+
+<p>
+
+Las pruebas dinámicas consisten en ejecutar el software para comprobar su funcionamiento utilizando diferentes datos de entrada y analizando las respuestas obtenidas. Permiten identificar errores de lógica, fallos en procesos y problemas de integración.
+
+</p>
+
+<p>
+
+Estas pruebas representan la mayor parte del proceso de aseguramiento de calidad debido a que verifican el comportamiento real del sistema.
+
+</p>
+
+</div>
+
+<hr>
+
+<h2>2. Ejercicios Adicionales (Diapositiva 9)</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+
+Un sistema de biblioteca permite registrar libros cuya cantidad debe estar entre 1 y 200 ejemplares.
+
+</p>
+
+<b>Se solicita:</b>
+
+<ul>
+
+<li>Identificar las particiones de equivalencia.</li>
+
+<li>Diseñar los casos mínimos de prueba.</li>
+
+</ul>
+
+<h4>Solución</h4>
+
+<table>
+
+<tr>
+
+<th>Clase</th>
+
+<th>Valor</th>
+
+<th>Resultado esperado</th>
+
+</tr>
+
+<tr>
+
+<td>Inválida</td>
+
+<td>0</td>
+
+<td>Error</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>50</td>
+
+<td>Registro correcto</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>150</td>
+
+<td>Registro correcto</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>200</td>
+
+<td>Registro correcto</td>
+
+</tr>
+
+<tr>
+
+<td>Inválida</td>
+
+<td>250</td>
+
+<td>Error</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+
+Un sistema acepta edades entre 18 y 65 años para registrar empleados.
+
+</p>
+
+<h4>Solución</h4>
+
+<table>
+
+<tr>
+
+<th>Clase</th>
+
+<th>Valor</th>
+
+<th>Resultado esperado</th>
+
+</tr>
+
+<tr>
+
+<td>Inválida</td>
+
+<td>15</td>
+
+<td>Error</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>18</td>
+
+<td>Aceptado</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>40</td>
+
+<td>Aceptado</td>
+
+</tr>
+
+<tr>
+
+<td>Válida</td>
+
+<td>65</td>
+
+<td>Aceptado</td>
+
+</tr>
+
+<tr>
+
+<td>Inválida</td>
+
+<td>70</td>
+
+<td>Error</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<hr>
+
+<h2>3. Ejercicios Adicionales (Diapositiva 10)</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Un desarrollador crea una función que calcula el total de una factura y verifica que el resultado sea correcto para diferentes valores.
+</p>
+
+<p><strong>Tipo de prueba:</strong> Prueba Unitaria</p>
+
+<p><strong>Tipo de caja:</strong> Caja Blanca</p>
+
+<p>
+Se trata de una prueba unitaria porque evalúa una función específica del sistema y el desarrollador conoce el código fuente.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Un usuario intenta iniciar sesión con credenciales válidas e inválidas para comprobar si el sistema responde correctamente.
+</p>
+
+<p><strong>Tipo de prueba:</strong> Prueba Funcional</p>
+
+<p><strong>Tipo de caja:</strong> Caja Negra</p>
+
+<p>
+El usuario únicamente verifica el comportamiento del sistema sin conocer cómo está implementado internamente.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Después de actualizar el módulo de inventario, el equipo ejecuta nuevamente todas las pruebas realizadas anteriormente para asegurar que el resto del sistema continúe funcionando correctamente.
+</p>
+
+<p><strong>Tipo de prueba:</strong> Prueba de Regresión</p>
+
+<p><strong>Tipo de caja:</strong> Caja Negra</p>
+
+<p>
+Esta prueba confirma que los cambios realizados no afectaron funcionalidades existentes.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Un especialista en seguridad intenta acceder a la base de datos mediante ataques de inyección SQL para verificar que el sistema sea seguro.
+</p>
+
+<p><strong>Tipo de prueba:</strong> Prueba de Seguridad</p>
+
+<p><strong>Tipo de caja:</strong> Caja Gris</p>
+
+<p>
+El especialista posee conocimiento parcial de la arquitectura para detectar vulnerabilidades.
+</p>
+
+</div>
+
+<hr>
+
+<h2>4. Estrategia de Pruebas para un Sistema de Inventario</h2>
+
+<p>
+
+Un sistema de inventario administra productos, proveedores, entradas, salidas y reportes. Para garantizar su correcto funcionamiento es necesario aplicar diferentes tipos de pruebas durante todo el ciclo de desarrollo.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Módulo</th>
+
+<th>Tipo de prueba</th>
+
+<th>Tipo de caja</th>
+
+<th>Herramienta</th>
+
+<th>Criterio de éxito</th>
+
+</tr>
+
+<tr>
+
+<td>Inicio de sesión</td>
+
+<td>Prueba Funcional</td>
+
+<td>Caja Negra</td>
+
+<td>Selenium</td>
+
+<td>Permite ingresar únicamente con credenciales válidas.</td>
+
+</tr>
+
+<tr>
+
+<td>Registro de Productos</td>
+
+<td>Prueba Unitaria</td>
+
+<td>Caja Blanca</td>
+
+<td>JUnit</td>
+
+<td>Los datos se almacenan correctamente en la base de datos.</td>
+
+</tr>
+
+<tr>
+
+<td>Actualización del Stock</td>
+
+<td>Prueba de Integración</td>
+
+<td>Caja Gris</td>
+
+<td>Postman</td>
+
+<td>El stock se actualiza correctamente después de cada movimiento.</td>
+
+</tr>
+
+<tr>
+
+<td>Búsqueda de Productos</td>
+
+<td>Prueba de Sistema</td>
+
+<td>Caja Negra</td>
+
+<td>Cypress</td>
+
+<td>Las búsquedas muestran resultados correctos en menos de dos segundos.</td>
+
+</tr>
+
+<tr>
+
+<td>Reportes</td>
+
+<td>Prueba Funcional</td>
+
+<td>Caja Negra</td>
+
+<td>Selenium</td>
+
+<td>Los reportes contienen información completa y precisa.</td>
+
+</tr>
+
+<tr>
+
+<td>Rendimiento General</td>
+
+<td>Prueba de Rendimiento</td>
+
+<td>Caja Negra</td>
+
+<td>JMeter</td>
+
+<td>El sistema soporta al menos 500 usuarios simultáneos sin errores.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguridad</td>
+
+<td>Prueba de Seguridad</td>
+
+<td>Caja Gris</td>
+
+<td>OWASP ZAP</td>
+
+<td>No existen vulnerabilidades críticas.</td>
+
+</tr>
+
+<tr>
+
+<td>Entrega Final</td>
+
+<td>Prueba de Aceptación (UAT)</td>
+
+<td>Caja Negra</td>
+
+<td>Pruebas Manuales</td>
+
+<td>El cliente aprueba el funcionamiento del sistema.</td>
+
+</tr>
+
+</table>
+
+<h3>Importancia de la estrategia</h3>
+
+<p>
+
+Implementar una estrategia de pruebas permite detectar errores desde las primeras etapas del desarrollo, mejorar la calidad del software y garantizar que el sistema de inventario funcione correctamente antes de ser entregado al cliente. Además, reduce costos de mantenimiento, incrementa la confiabilidad del sistema y mejora la experiencia de los usuarios finales.
+
+</p>
+
+<hr>
+
+<h2>Conclusión</h2>
+
+<p>
+
+Las pruebas de software constituyen una de las actividades más importantes dentro del aseguramiento de la calidad. Aplicar correctamente pruebas funcionales, no funcionales, unitarias, de integración, sistema, aceptación, regresión, humo y seguridad permite desarrollar aplicaciones más confiables, seguras y eficientes. Una adecuada estrategia de pruebas ayuda a prevenir errores, optimizar el mantenimiento del sistema y garantizar el cumplimiento de los requisitos del cliente.
+
+</p>
+
+<a href="index.html">
+
+← Volver al cronograma
+
+</a>
+
+</div>
+
+</body>
+
+</html>

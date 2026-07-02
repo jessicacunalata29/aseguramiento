@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semana 6 - Importancia de las Pruebas de Software</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#0d1117;
+color:white;
+margin:0;
+padding:0;
+}
+
+header{
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+padding:30px;
+text-align:center;
+}
+
+h1{
+margin:0;
+}
+
+section{
+margin:20px;
+padding:20px;
+background:#161b22;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,255,255,0.2);
+}
+
+h2{
+color:#00d4ff;
+}
+
+.card{
+background:#21262d;
+padding:15px;
+margin:10px 0;
+border-left:5px solid cyan;
+border-radius:10px;
+}
+
+button{
+background:#00c6ff;
+border:none;
+padding:12px 18px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0099cc;
+}
+
+#resultado{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+color:#00ff99;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #444;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#0072ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SEMANA 6</h1>
+
+<h2>Importancia de las Pruebas de Software</h2>
+
+<p>Laboratorio Interactivo</p>
+
+</header>
+
+<section>
+
+<h2>Desarrollo de la Diapositiva 2 - Semana 6</h2>
+
+<div class="card">
+
+<h3>1. ¿Por qué probamos software?</h3>
+
+<p>
+
+Las pruebas de software se realizan para detectar errores antes de que el sistema llegue a los usuarios finales. Su objetivo es garantizar la calidad, seguridad y correcto funcionamiento del software.
+
+</p>
+
+<p>
+
+<b>Ejemplo:</b> En un sistema hospitalario se verifica que el registro de pacientes guarde correctamente los datos para evitar errores médicos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2. El costo de no probar</h3>
+
+<p>
+
+Cuando un software no se prueba adecuadamente, los errores pueden ocasionar pérdidas económicas, retrasos, fallos de seguridad y pérdida de confianza de los usuarios.
+
+</p>
+
+<p>
+
+<b>Ejemplo:</b> Si un banco no prueba su sistema de transferencias, una falla podría enviar dinero a una cuenta equivocada y generar pérdidas económicas.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3. Los 7 principios fundamentales del testing</h3>
+
+<p>
+
+Estos principios ayudan a comprender que las pruebas no garantizan un software perfecto, pero sí reducen considerablemente los riesgos y errores.
+
+</p>
+
+<p>
+
+<b>Ejemplo:</b> En un sistema hospitalario se detectó que la mayoría de los errores se concentraban en el módulo de administración de medicamentos, por lo que se priorizó su revisión.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4. Tipos y niveles de pruebas</h3>
+
+<p>
+
+Las pruebas se dividen en unitarias, integración, sistema y aceptación. Cada una verifica una parte específica del software.
+
+</p>
+
+<ul>
+
+<li><b>Pruebas unitarias:</b> verifican una función.</li>
+
+<li><b>Pruebas de integración:</b> verifican la comunicación entre módulos.</li>
+
+<li><b>Pruebas de sistema:</b> evalúan el sistema completo.</li>
+
+<li><b>Pruebas de aceptación:</b> las realiza el cliente.</li>
+
+</ul>
+
+<p>
+
+<b>Ejemplo:</b> Probar que el módulo de citas médicas se conecte correctamente con el historial del paciente.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>5. Proceso de pruebas</h3>
+
+<p>
+
+Las pruebas siguen cinco etapas fundamentales:
+
+</p>
+
+<ul>
+
+<li>Planificación.</li>
+
+<li>Diseño.</li>
+
+<li>Ejecución.</li>
+
+<li>Evaluación.</li>
+
+<li>Cierre.</li>
+
+</ul>
+
+<p>
+
+<b>Ejemplo:</b> Antes de lanzar una aplicación médica, primero se planifican las pruebas, luego se diseñan los casos, se ejecutan, se evalúan los resultados y finalmente se documenta el proceso.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>6. Ejercicios prácticos</h3>
+
+<p>
+
+Los ejercicios permiten aplicar los conocimientos adquiridos y tomar decisiones basadas en riesgos.
+
+</p>
+
+<p>
+
+<b>Ejemplo:</b> Priorizar qué módulo probar primero en un hospital:
+
+</p>
+
+<ul>
+
+<li>Administración de medicamentos → Riesgo alto.</li>
+
+<li>Historia clínica → Riesgo medio.</li>
+
+<li>Agenda de citas → Riesgo medio.</li>
+
+<li>Facturación → Riesgo bajo.</li>
+
+<li>Reportes estadísticos → Riesgo bajo.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>Contenido y Simulación de Casos SCAD</h2>
+
+<div class="card">
+
+<h3>Caso 1: Sistema Hospitalario</h3>
+
+<p>Se detectó un error en la administración de medicamentos.</p>
+
+<button onclick="hospital()">Simular Caso</button>
+
+</div>
+
+<div class="card">
+
+<h3>Caso 2: Plataforma E-commerce</h3>
+
+<p>El sistema debe soportar 10.000 usuarios.</p>
+
+<button onclick="ecommerce()">Simular Caso</button>
+
+</div>
+
+<div class="card">
+
+<h3>Caso 3: Sistema Bancario</h3>
+
+<p>Se modificó el módulo de autenticación.</p>
+
+<button onclick="banco()">Simular Caso</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</section>
+<section>
+
+<h2>Los 7 Principios del Testing Aplicados</h2>
+
+<p>
+Ejemplo aplicado: Sistema de Gestión Hospitalaria utilizado para registrar pacientes, administrar medicamentos y agendar citas médicas.
+</p>
+
+<table>
+
+<tr>
+
+<th>Principio</th>
+
+<th>Aplicación</th>
+
+<th>Ejemplo</th>
+
+</tr>
+
+<tr>
+
+<td>1. Las pruebas muestran la presencia de defectos</td>
+
+<td>Las pruebas ayudan a encontrar errores, pero no garantizan que el sistema esté libre de ellos.</td>
+
+<td>Al probar el registro de pacientes se detectó que algunos datos no se guardaban correctamente.</td>
+
+</tr>
+
+<tr>
+
+<td>2. Las pruebas exhaustivas son imposibles</td>
+
+<td>No se pueden probar todas las combinaciones posibles.</td>
+
+<td>El hospital tiene miles de pacientes, médicos y horarios; se seleccionan los casos más críticos.</td>
+
+</tr>
+
+<tr>
+
+<td>3. Las pruebas tempranas ahorran tiempo y dinero</td>
+
+<td>Las pruebas deben comenzar desde los requisitos.</td>
+
+<td>Antes de programar, se verificó que el sistema permitiera asignar medicamentos correctamente.</td>
+
+</tr>
+
+<tr>
+
+<td>4. Agrupamiento de defectos</td>
+
+<td>La mayoría de los errores suele concentrarse en pocos módulos.</td>
+
+<td>El 80% de los errores se encontró en el módulo de medicamentos.</td>
+
+</tr>
+
+<tr>
+
+<td>5. Paradoja del pesticida</td>
+
+<td>Las pruebas deben actualizarse constantemente.</td>
+
+<td>Si siempre se prueba el mismo paciente, nuevos errores nunca serán detectados.</td>
+
+</tr>
+
+<tr>
+
+<td>6. Las pruebas dependen del contexto</td>
+
+<td>Cada sistema requiere diferentes estrategias de prueba.</td>
+
+<td>Un sistema hospitalario necesita pruebas estrictas de seguridad porque afecta la vida de los pacientes.</td>
+
+</tr>
+
+<tr>
+
+<td>7. Ausencia de errores es una falacia</td>
+
+<td>Un sistema puede no tener errores y aun así no satisfacer al usuario.</td>
+
+<td>El sistema funciona correctamente, pero si los médicos no encuentran rápidamente la información, el software no cumple su propósito.</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<div class="card">
+
+<h3>Conclusión del ejemplo aplicado</h3>
+
+<p>
+
+En un Sistema de Gestión Hospitalaria, aplicar los 7 principios del testing permite reducir riesgos, prevenir errores críticos, proteger la seguridad de los pacientes y garantizar que el software cumpla las necesidades de médicos, enfermeros y administradores.
+
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+function hospital(){
+
+document.getElementById("resultado").innerHTML=
+
+"🔴 Riesgo Alto: Prioridad 1. Aplicar pruebas de seguridad y de sistema.";
+
+}
+
+function ecommerce(){
+
+document.getElementById("resultado").innerHTML=
+
+"🟡 Riesgo Medio: Aplicar pruebas de carga y estrés.";
+
+}
+
+function banco(){
+
+document.getElementById("resultado").innerHTML=
+
+"🟢 Riesgo Controlado: Aplicar pruebas de regresión.";
+
+}
+
+</script>
+<a href="index.html">
+Volver al cronograma
+</a>
+
+</body>
+
+
+</html>

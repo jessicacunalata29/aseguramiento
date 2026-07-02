@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+    border-bottom:3px solid #0d47a1;
+    padding-bottom:10px;
+}
+
+h2{
+    color:#1565c0;
+    margin-top:30px;
+}
+
+h3{
+    color:#1976d2;
+}
+
+p{
+    text-align:justify;
+}
+
+ul{
+    margin-left:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th{
+    background:#1565c0;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    text-align:center;
+}
+
+.seccion{
+    margin-bottom:30px;
+}
+
+.formula{
+    background:#e3f2fd;
+    padding:10px;
+    border-left:5px solid #1565c0;
+    font-weight:bold;
+}
+
+.conclusion{
+    background:#f1f8e9;
+    padding:15px;
+    border-left:5px solid green;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>PDCA Aplicado al Desarrollo de Software</h1>
+
+<div class="seccion">
+<h2>1. Diagrama de Gantt</h2>
+<p>
+Es una herramienta de planificación que muestra las actividades de un proyecto,
+sus fechas de inicio y fin y el progreso de cada tarea mediante barras horizontales.
+</p>
+
+<h3>Beneficios</h3>
+<ul>
+<li>Permite planificar tareas.</li>
+<li>Controla tiempos y recursos.</li>
+<li>Facilita el seguimiento del proyecto.</li>
+</ul>
+</div>
+
+<div class="seccion">
+<h2>2. User Stories (Historias de Usuario)</h2>
+
+<p>
+Son descripciones breves de funcionalidades escritas desde la perspectiva del usuario.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+"Como paciente, quiero reservar una cita médica en línea para evitar filas y ahorrar tiempo."
+</p>
+</div>
+
+<div class="seccion">
+<h2>3. Product Backlog</h2>
+
+<p>
+Es una lista priorizada de requisitos, funcionalidades, mejoras y correcciones
+que debe realizar el equipo de desarrollo.
+</p>
+
+<h3>Características</h3>
+
+<ul>
+<li>Dinámico.</li>
+<li>Ordenado por prioridad.</li>
+<li>Administrado por el Product Owner.</li>
+</ul>
+</div>
+
+<div class="seccion">
+<h2>4. Risk Matrix (Matriz de Riesgos)</h2>
+
+<p>
+Herramienta utilizada para identificar, evaluar y priorizar riesgos de un proyecto.
+</p>
+
+<table>
+<tr>
+<th>Riesgo</th>
+<th>Probabilidad</th>
+<th>Impacto</th>
+</tr>
+
+<tr>
+<td>Caída del servidor</td>
+<td>Alta</td>
+<td>Alto</td>
+</tr>
+
+<tr>
+<td>Retraso del proveedor</td>
+<td>Media</td>
+<td>Medio</td>
+</tr>
+</table>
+</div>
+
+<div class="seccion">
+<h2>Herramientas de Calidad</h2>
+
+<h3>SonarQube</h3>
+<p>Analiza la calidad del código e identifica errores y vulnerabilidades.</p>
+
+<h3>Git</h3>
+<p>Sistema de control de versiones para gestionar cambios en el código.</p>
+
+<h3>Jenkins</h3>
+<p>Automatiza pruebas y despliegues mediante Integración Continua.</p>
+
+<h3>PyTest</h3>
+<p>Framework utilizado para pruebas automatizadas en Python.</p>
+
+<h3>Docker</h3>
+<p>Permite ejecutar aplicaciones dentro de contenedores.</p>
+</div>
+
+<div class="seccion">
+<h2>Métricas y Reportes</h2>
+
+<h3>TestRail</h3>
+<p>Herramienta para administrar casos de prueba y resultados.</p>
+
+<h3>Coverage Reports</h3>
+
+<p>Indican el porcentaje de código cubierto por pruebas.</p>
+
+<div class="formula">
+Cobertura = (Líneas probadas / Total de líneas) × 100
+</div>
+
+<h3>Burndown Chart</h3>
+<p>Muestra el trabajo restante durante un Sprint.</p>
+
+<h3>Dashboards QA</h3>
+<p>Paneles visuales con indicadores de calidad y resultados de pruebas.</p>
+</div>
+
+<div class="seccion">
+<h2>Herramientas de Mejora Continua</h2>
+
+<h3>Retrospective Boards</h3>
+
+<ul>
+<li>Qué salió bien.</li>
+<li>Qué salió mal.</li>
+<li>Qué puede mejorar.</li>
+</ul>
+
+<h3>Wikis</h3>
+<p>Repositorios de documentación compartida.</p>
+
+<h3>Playbooks</h3>
+<p>Documentos con procedimientos y buenas prácticas.</p>
+
+<h3>KPIs de Calidad</h3>
+
+<ul>
+<li>Número de defectos.</li>
+<li>Cobertura de pruebas.</li>
+<li>Tiempo de resolución de errores.</li>
+<li>Disponibilidad del sistema.</li>
+</ul>
+</div>
+
+<div class="seccion">
+<h2>Ciclo de Deming (PDCA)</h2>
+
+<h3>Planificar</h3>
+<p>Definir objetivos y procesos.</p>
+
+<h3>Hacer</h3>
+<p>Implementar lo planificado.</p>
+
+<h3>Verificar</h3>
+<p>Evaluar los resultados.</p>
+
+<h3>Actuar</h3>
+<p>Aplicar mejoras y corregir problemas.</p>
+
+<h3>Ejemplo Real</h3>
+
+<p><strong>Proyecto:</strong> Sistema de citas médicas.</p>
+
+<ul>
+<li><strong>Planificar:</strong> Detectar retrasos en la reserva de citas.</li>
+<li><strong>Hacer:</strong> Desarrollar un módulo de citas en línea.</li>
+<li><strong>Verificar:</strong> Medir tiempos de reserva.</li>
+<li><strong>Actuar:</strong> Mejorar la interfaz del sistema.</li>
+</ul>
+</div>
+
+<div class="seccion">
+<h2>ISO 25010</h2>
+
+<p>
+La norma ISO 25010 define las características de calidad del software.
+</p>
+
+<ol>
+<li>Adecuación funcional.</li>
+<li>Eficiencia del desempeño.</li>
+<li>Compatibilidad.</li>
+<li>Usabilidad.</li>
+<li>Fiabilidad.</li>
+<li>Seguridad.</li>
+<li>Mantenibilidad.</li>
+<li>Portabilidad.</li>
+</ol>
+</div>
+
+<div class="seccion">
+<h2>Métricas de Confiabilidad</h2>
+
+<h3>MTBF (Mean Time Between Failures)</h3>
+
+<p>
+Tiempo promedio entre fallos de un sistema.
+</p>
+
+<div class="formula">
+MTBF > 720 horas
+</div>
+
+<p>
+Significa que el sistema debe funcionar más de 720 horas antes de presentar una falla.
+</p>
+
+<h3>MTTR (Mean Time To Repair)</h3>
+
+<p>
+Tiempo promedio necesario para reparar una falla.
+</p>
+
+<div class="formula">
+MTTR > 1 hora
+</div>
+
+<p>
+Representa el tiempo promedio requerido para recuperar el sistema.
+</p>
+
+<div class="formula">
+MTBF = Tiempo total de operación / Número de fallos
+<br><br>
+MTTR = Tiempo total de reparación / Número de reparaciones
+</div>
+</div>
+
+<div class="conclusion">
+<h2>Conclusión</h2>
+
+<p>
+El aseguramiento de calidad de software garantiza que los sistemas cumplan
+los requisitos establecidos mediante herramientas, métricas, pruebas y
+procesos de mejora continua, permitiendo desarrollar productos más confiables,
+seguros y eficientes.
+</p>
+</div>
+
+</div>
+
+</body>
+<div style="
+text-align:center;
+margin-top:40px;
+">
+
+<a href="index.html" style="
+display:inline-block;
+padding:14px 30px;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+border-radius:50px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+🏠 Volver al Cronograma
+</a>
+
+</div>
+</html>

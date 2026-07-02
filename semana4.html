@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semana 4 - Aseguramiento de Calidad</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+    border-bottom:3px solid #0d47a1;
+    padding-bottom:10px;
+}
+
+h2{
+    color:#1565c0;
+    margin-top:30px;
+}
+
+p{
+    text-align:justify;
+}
+
+ul{
+    margin-left:20px;
+}
+
+.formula{
+    background:#e3f2fd;
+    padding:10px;
+    border-left:5px solid #1565c0;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.conclusion{
+    background:#f1f8e9;
+    padding:15px;
+    border-left:5px solid green;
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Investigacion
+
+</h1>
+
+<h2>1. Defect Density (Densidad de Defectos)</h2>
+
+<p>
+Es una métrica que mide la cantidad de errores encontrados en relación con el tamaño del software.
+Se utiliza para evaluar la calidad del producto desarrollado.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+Un sistema de citas médicas tiene 15 defectos encontrados en 1.500 líneas de código.
+</p>
+
+<div class="formula">
+Densidad de Defectos = 15 / 1500 = 0.01
+</div>
+
+<p>
+Esto significa que existe aproximadamente 1 defecto por cada 100 líneas de código.
+</p>
+
+<hr>
+
+<h2>2. Cobertura de Pruebas</h2>
+
+<p>
+Es el porcentaje del código que ha sido ejecutado durante las pruebas de software.
+Permite conocer qué tan probado está el sistema.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+Un proyecto tiene 1.000 líneas de código y las pruebas ejecutan 850 líneas.
+</p>
+
+<div class="formula">
+Cobertura = (850 / 1000) × 100 = 85%
+</div>
+
+<p>
+El sistema posee una cobertura de pruebas del 85%.
+</p>
+
+<hr>
+
+<h2>3. Complejidad Ciclomática</h2>
+
+<p>
+Es una métrica que mide la cantidad de caminos lógicos independientes que existen dentro de un programa.
+Ayuda a determinar qué tan complejo es el código.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+Un programa para registrar pacientes tiene tres decisiones:
+</p>
+
+<ul>
+<li>Verificar usuario.</li>
+<li>Validar datos ingresados.</li>
+<li>Confirmar la cita médica.</li>
+</ul>
+
+<p>
+Mientras más decisiones tenga el programa, mayor será la complejidad ciclomática y más pruebas se necesitarán.
+</p>
+
+<hr>
+
+<h2>4. Acoplamiento entre Clases</h2>
+
+<p>
+Es el grado de dependencia que existe entre dos o más clases de un sistema.
+Un bajo acoplamiento facilita el mantenimiento y la reutilización del código.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+En un sistema de citas médicas existe una clase <strong>Paciente</strong> y una clase <strong>Cita</strong>.
+La clase Cita utiliza información del Paciente para registrar una consulta.
+</p>
+
+<p>
+Si la clase Cita depende demasiado de la clase Paciente, existe un alto acoplamiento.
+Si cada clase funciona de manera más independiente, el acoplamiento es bajo y el sistema será más fácil de mantener.
+</p>
+
+<h2>5. ¿Qué es un Grafo?</h2>
+
+<p>
+Un grafo es una estructura formada por nodos y conexiones llamadas aristas.
+En ingeniería de software se utiliza para representar flujos de procesos, navegación y análisis de complejidad.
+</p>
+
+<h2>6. Operación del Producto</h2>
+
+<p>
+Se refiere al comportamiento del software durante su uso diario por parte de los usuarios.
+Incluye eficiencia, seguridad, confiabilidad y facilidad de uso.
+</p>
+
+<h2>7. Revisión del Producto</h2>
+
+<p>
+Proceso de evaluación del software para identificar errores, defectos y oportunidades de mejora antes de su entrega.
+</p>
+
+<h2>8. Transición del Producto</h2>
+
+<p>
+Es el proceso mediante el cual un sistema pasa desde el desarrollo hacia el entorno real de operación.
+</p>
+
+<h2>9. Portabilidad</h2>
+
+<p>
+Capacidad del software para ejecutarse correctamente en diferentes plataformas, sistemas operativos o dispositivos.
+</p>
+
+<p>
+Ejemplo: Una aplicación que funciona tanto en Windows como en Linux.
+</p>
+
+<h2>10. Reutilización</h2>
+
+<p>
+Capacidad de utilizar componentes de software ya desarrollados en nuevos proyectos para reducir tiempo y costos.
+</p>
+
+<h2>11. Interoperabilidad</h2>
+
+<p>
+Capacidad de distintos sistemas o aplicaciones para intercambiar información y trabajar conjuntamente.
+</p>
+
+<p>
+Ejemplo: Un sistema de citas médicas conectado con un sistema de facturación.
+</p>
+
+<h2>12. Modelo CMMI</h2>
+
+<p>
+Capability Maturity Model Integration es un modelo que permite mejorar y evaluar los procesos de desarrollo de software dentro de una organización.
+</p>
+
+<h2>13. Nivel 1 - Inicial</h2>
+
+<p>
+Los procesos son impredecibles y dependen principalmente de los esfuerzos individuales.
+</p>
+
+<h2>14. Nivel 2 - Gestionado</h2>
+
+<p>
+Los procesos son planificados, monitoreados y controlados para cumplir objetivos específicos.
+</p>
+
+<h2>15. Nivel 3 - Definido</h2>
+
+<p>
+Los procesos están documentados y estandarizados en toda la organización.
+</p>
+
+<h2>16. Nivel 4 - Gestionado Cuantitativamente</h2>
+
+<p>
+La organización utiliza métricas y datos estadísticos para controlar y mejorar sus procesos.
+</p>
+
+<h2>17. Usabilidad General</h2>
+
+<p>
+Capacidad del software para ser comprendido, aprendido y utilizado fácilmente por los usuarios.
+</p>
+
+<ul>
+<li>Facilidad de aprendizaje.</li>
+<li>Facilidad de uso.</li>
+<li>Satisfacción del usuario.</li>
+</ul>
+
+<h2>18. Mantenibilidad</h2>
+
+<p>
+Capacidad del software para ser modificado, corregido o mejorado de manera eficiente.
+</p>
+
+<h2>19. Portabilidad (ISO 25010)</h2>
+
+<p>
+Permite trasladar el software a distintos entornos sin realizar grandes modificaciones.
+</p>
+
+<h2>20. Independencia del Dispositivo</h2>
+
+<p>
+Capacidad de una aplicación para funcionar correctamente en diferentes dispositivos como computadoras, tablets y teléfonos móviles.
+</p>
+
+<h2>21. Auto-contenido</h2>
+
+<p>
+Característica de un componente de software que puede funcionar de forma independiente sin depender excesivamente de otros módulos.
+</p>
+
+<div class="conclusion">
+
+<h2>Conclusión</h2>
+
+<p>
+El aseguramiento de calidad permite evaluar la calidad del software mediante métricas, estándares y modelos como CMMI. Conceptos como densidad de defectos, cobertura de pruebas, complejidad ciclomática, interoperabilidad y portabilidad ayudan a desarrollar sistemas más confiables, mantenibles y eficientes para los usuarios.
+</p>
+
+</div>
+
+</div>
+
+</body>
+<div style="
+text-align:center;
+margin-top:40px;
+">
+
+<a href="index.html" style="
+display:inline-block;
+padding:14px 30px;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+border-radius:50px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+🏠 Volver al Cronograma
+</a>
+
+</div>
+</html>
